@@ -59,7 +59,7 @@ ssd_loss = SSDLoss(neg_pos_ratio=3, n_neg_min=0, alpha=1.0)                     
 model.compile(optimizer=adam, loss=ssd_loss.compute_loss)                       #create model
 
 """# TODO: Set the path to the `.h5` file of the model to be loaded.
-model_path = '/home/quest/ssd_keras/ssd7.h5'
+model_path = '/home/ssd_keras/ssd7.h5'
 
 # We need to create an SSDLoss object in order to pass that to the model loader.
 ssd_loss = SSDLoss(neg_pos_ratio=3, n_neg_min=0, alpha=1.0)
@@ -74,12 +74,12 @@ train_dataset = BatchGenerator(box_output_format=['class_id', 'xmin', 'ymin', 'x
 val_dataset = BatchGenerator(box_output_format=['class_id', 'xmin', 'ymin', 'xmax', 'ymax'])
 
 
-train_images_dir      = '/home/quest/udacity_driving_datasets'
-train_labels_filename = '/home/quest/udacity_driving_datasets/labels_train.csv'
+train_images_dir      = '/home/udacity_driving_datasets'
+train_labels_filename = '/home/udacity_driving_datasets/labels_train.csv'
 
 
-val_images_dir      = '/home/quest/udacity_driving_datasets'
-val_labels_filename = '/home/quest/udacity_driving_datasets/labels_val.csv'
+val_images_dir      = '/home/udacity_driving_datasets'
+val_labels_filename = '/home/udacity_driving_datasets/labels_val.csv'
 
 train_dataset.parse_csv(images_dir=train_images_dir,
                         labels_filename=train_labels_filename,
